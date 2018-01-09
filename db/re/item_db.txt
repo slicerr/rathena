@@ -6857,14 +6857,14 @@
 //===================================================================
 // Guillotine Cross Poisons
 //===================================================================
-12717,Poison_Paralysis,Paralyze,2,2,,100,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
-12718,Poison_Leech,Leech End,2,2,,100,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
-12719,Poison_Oblivion,Oblivion Curse,2,2,,100,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
-12720,Poison_Contamination,Disheart,2,2,,100,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
-12721,Poison_Numb,Toxin,2,2,,100,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
-12722,Poison_Fever,Pyrexia,2,2,,100,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
-12723,Poison_Laughing,Magic Mushroom,2,2,,100,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
-12724,Poison_Fatigue,Venom Bleed,2,2,,100,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
+12717,Poison_Paralysis,Paralyze,2,2,,20,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
+12718,Poison_Leech,Leech End,2,2,,20,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
+12719,Poison_Oblivion,Oblivion Curse,2,2,,20,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
+12720,Poison_Contamination,Disheart,2,2,,20,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
+12721,Poison_Numb,Toxin,2,2,,20,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
+12722,Poison_Fever,Pyrexia,2,2,,20,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
+12723,Poison_Laughing,Magic Mushroom,2,2,,20,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
+12724,Poison_Fatigue,Venom Bleed,2,2,,20,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
 //===================================================================
 // Rune Knight's Rune Stones
 //===================================================================
