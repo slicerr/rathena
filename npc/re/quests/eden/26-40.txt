@@ -14,60 +14,61 @@
 //= 1.2 Optimized. [Euphy]
 //= 1.3 Added support to Para_Team_Mark_ in Eden Group. [Ragno]
 //= 1.4 Added use of F_HasEdenGroupMark function. [Ragno]
+//= 1.4a Iniciado Tradução PT-BR 08-05-2018. [Slicer]
 //============================================================
 
 moc_para01,38,38,3	script	Mission [26 - 40]	857,{
 	if (!callfunc("F_HasEdenGroupMark")) {
-		mes "You are not a qualified member. You can not use the bulletin board.";
+		mes "Você não é um membro registrado. Você não pode usar as placas de missões.";
 		close;
 	}
 	mes "[26 ~ 40 Lv. Mission Board]";
-	mes "- Many missions are -";
-	mes "- on the bulletin board. -";
+	mes "- Muitas missões estão -";
+	mes "- no quadro de avisos. -";
 	next;
 	if ((BaseLevel < 26) || (BaseLevel > 40)) {
-		mes "Your level is not qualified. You can not use the bulletin board.";
+		mes "Seu level não está qualificado para este nível de missões.";
 		close;
 	}
-	switch(select("Hunting Mission:Delivery Mission:Gathering Mission:Escort Mission")) {
+	switch(select("Missões de Caça:Missões de Entrega:Missões de Coletar:Missões de Escolta")) {
 	case 1:
 		mes "[Hunting Mission Board]";
-		mes "- Hunting Mission details -";
-		mes "- are on the board. -";
+		mes "- Missões de Caça -";
+		mes "- ^FF0000Exibindo no quadro de Avisos^000000 -";
 		next;
-		switch(select("Hunting Poison Spore:Hunting Smokie:Hunting Elder Willow(Above Lv.30):Hunting Coco(Above Lv.35):Hunting Thara Frog(Above Lv.38)")) {
-			case 1: callsub L_Quest,8266,0,"Hunting Poison Spore","Sponiac","Geffen","Hunt 10 Poison Spores";
-			case 2: callsub L_Quest,8267,0,"Hunting Smokie","Sponiac","Geffen","Hunt 10 Smokies";
-			case 3: callsub L_Quest,8268,30,"Hunting Elder Willow","Sponiac","Geffen","Hunt 10 Elder Willows";
-			case 4: callsub L_Quest,8269,35,"Hunting Coco","Sponiac","Geffen","Hunt 10 Cocos";
-			case 5: callsub L_Quest,8270,38,"Hunting Thara Frog","Sponiac","Geffen","Hunt 10 Thara Frogs";
+		switch(select("Caçar Esporo Venenoso:Caçar Fumacento:Caçar Salgueiro Ancião(Acima Lv.30):Caçar Coco(Acima Lv.35):Caçar Sapo de Thara(Acima Lv.38)")) {
+			case 1: callsub L_Quest,8266,0,"Caçando Esporo Venenoso","Sponiac","Geffen","Caçar 10 Esporos Venenosos";
+			case 2: callsub L_Quest,8267,0,"Caçando Fumacento","Sponiac","Geffen","Caçar 10 Fumacentos";
+			case 3: callsub L_Quest,8268,30,"Caçando Salgueiro Ancião","Sponiac","Geffen","Caçar 10 Salgueiros Anciões";
+			case 4: callsub L_Quest,8269,35,"Caçando Coco","Sponiac","Geffen","Caçar 10 Cocos";
+			case 5: callsub L_Quest,8270,38,"Caçando Sapo de Thara","Sponiac","Geffen","Caçar 10 Sapos de Thara";
 		}
 	case 2:
 		mes "[Delivery Mission Board]";
-		mes "- Delivery Mission details -";
-		mes "- are on the board. -";
+		mes "- Detalhes das Missões de Entrega -";
+		mes "- ^FF0000Exibindo no quadro de Avisos^000000 -";
 		next;
-		switch(select("Deliver an Insecticide:Deliver Honey:Deliver Blanket(Above Lv.35)")) {
-			case 1: callsub L_Quest,8271,0,"Deliver an Insecticide","Dieshin Man","Morroc Ruins","Get an 'Insecticide' from Dieshin Man and deliver it south east of Payon";
-			case 2: callsub L_Quest,8272,0,"Deliver Honey","Dieshin Man","Morroc Ruins","Get 'Honey' from Dieshin Man and deliver it west of St. Capitolina Abbey";
-			case 3: callsub L_Quest,8273,35,"Deliver Blanket","Dieshin Man","Morroc Ruins","Get Blankets from Dieshin Man and deliver to the field south of Lutie";
+		switch(select("Entregar um inseticida:Entregar Mel:Entregar Cobertor(Above Lv.35)")) {
+			case 1: callsub L_Quest,8271,0,"Entregue um inseticida","Dieshin Man","Morroc Ruins","Get an 'Insecticide' from Dieshin Man and deliver it south east of Payon";
+			case 2: callsub L_Quest,8272,0,"Entregue Mel","Dieshin Man","Morroc Ruins","Get 'Honey' from Dieshin Man and deliver it west of St. Capitolina Abbey";
+			case 3: callsub L_Quest,8273,35,"Entregue o Cobertor","Dieshin Man","Morroc Ruins","Get Blankets from Dieshin Man and deliver to the field south of Lutie";
 		}
 	case 3:
 		mes "[Gathering Mission Board]";
-		mes "- Gathering Mission details -";
-		mes "- are on the board. -";
+		mes "- Missões de Coletar -";
+		mes "- ^FF0000Exibindo no quadro de Avisos^000000 -";
 		next;
-		switch(select("Gather Bones:Gather Animal Skins:Gather Peelings(Above Lv.30):Gather Tails(Above Lv.32):Gather Cookies(Above Lv.35):Gather Mustaches(Above Lv.35)")) {
-			case 1: callsub L_Quest,8274,0,"Gather Bones","Dashia","Payon","Gather '10 Skel-Bones' and give them to Dashia";
-			case 2: callsub L_Quest,8275,0,"Gather Animal Skins","Dashia","Payon","Gather '10 Bear's Footskins' and '5 Animal Skins' and give them to Dashia";
-			case 3: callsub L_Quest,8276,30,"Gather Peelings","Dashia","Payon","Gather '20 Worm Peelings' and '20 Garlets' and give them to Dashia";
-			case 4: callsub L_Quest,8277,32,"Gather Tails","Dashia","Payon","Gather '10 Yoyo Tails', '10 Acorns' and '10 Raccon Leafs' and give them to Dashia";
-			case 5: callsub L_Quest,8278,35,"Gather Cookies","Dashia","Payon","Gather '5 Well-baked Cookies' and '1 Piece of Cake' and give them to Dashia";
-			case 6: callsub L_Quest,8279,35,"Gather Mustaches","Dashia","Payon","Gather '5 Mole Whiskers' and '3 Mole Claws' and give them to Dashia";
+		switch(select("Colete Ossos:Colete Patas de Animal:Coletar Escamas(Acima Lv.30):Coletar Caudas(Acima Lv.32):Coleta Biscoitos(Acima Lv.35):Coletar Bigodes(Above Lv.35)")) {
+			case 1: callsub L_Quest,8274,0,"Colete Ossos","Dashia","Payon","Colete '10 Ossos' e entregue para Dashia";
+			case 2: callsub L_Quest,8275,0,"Colete Patas de Animal","Dashia","Payon","Colete '10 Patas de Urso' and '5 Peldes de Animal' e entregue para Dashia";
+			case 3: callsub L_Quest,8276,30,"Colega Escamosa","Dashia","Payon","Colete '20 Peles de Verme' and '20 Garletas' e entregue para Dashia";
+			case 4: callsub L_Quest,8277,32,"Coletar Caudas","Dashia","Payon","Colete '10 Caudas', '10 Avelãs' e '10 Folhas de Fumacento' e entregue para Dashia";
+			case 5: callsub L_Quest,8278,35,"Coletar Biscoitos","Dashia","Payon","Colete '5 Biscoito de Gengibre' e '1 Pedaço de Bolo' e entregue para Dashia";
+			case 6: callsub L_Quest,8279,35,"Coletar Bigodes","Dashia","Payon","Colete '5 Bigodes de Topeira' e '3 Garras de Topeira' e entregue para Dashia";
 		}
 	case 4:
 		mes "[Escort Mission Board]";
-		mes "There are currently no Escort Missions registered on the board.";
+		mes "Atualmente nenhuma missão de Escolta está registrada.";
 		close;
 	}
 	end;
@@ -75,36 +76,36 @@ L_Quest:
 	//QuestID,ReqLvl,Quest,Client,Loc,Desc
 	.@string$ = getarg(2);
 	if (BaseLevel < getarg(1,26)) {
-		mes "Your level doesn't meet the requirements. You can't take the '"+ .@string$ +"' mission.";
+		mes "Seu level não atende aos requisitos. Você não pode pegar a missão '"+ .@string$ +"'.";
 		close;
 	}
 	mes "["+ .@string$ +" !!]";
-	mes "Client : "+getarg(3);
-	mes "Client Location : "+getarg(4);
-	mes "Requested Mission : "+getarg(5);
+	mes "Cliente : "+getarg(3);
+	mes "Localização do Cliente : "+getarg(4);
+	mes "Missão Solicitada : "+getarg(5);
 	mes " ";
-	mes "Will you accept this mission?";
+	mes "Você aceita esta missão?";
 	next;
-	if(select("No, I won't accept it.:Yes, I will accept it.") == 1) {
-		mes "You have declined the "+ .@string$ +" mission.";
+	if(select("Não, prefiro não aceitar.:Sim, Eu irei aceitar.") == 1) {
+		mes "Você recusou aceitar a missão "+ .@string$ +".";
 		close;
 	}
-	if (checkquest(getarg(0)) > -1) mes "You are already doing this mission.";
+	if (checkquest(getarg(0)) > -1) mes "Você já está fazendo essa missão.";
 	else {
 		setquest getarg(0);
-		mes "You have accepted the "+ .@string$ +" mission.";
+		mes "Você aceitou a missão "+ .@string$ +".";
 	}
-	mes "You can get a reward from the client after you finish the mission.";
+	mes "Você pode receber uma recompensa do cliente depois de terminar a missão.";
 	next;
-	mes "For more details, please press 'Alt + U', to get more information from the Quest Window.";
+	mes "Para mais detalhes, pressione 'Alt + U', para visualizar as informações na janela de missões.";
 	close;
 }
 
 geffen,103,42,5	script	Sponiac	99,{
 	if (checkweight(1201,1) == 0 || (MaxWeight - Weight) < 3500) {
 		mes "[Sponiac]";
-		mes "Why are you carrying so many items?";
-		mes "Are you in a training course or something?";
+		mes "Não acha que está carregando muitos itens?";
+		mes "Você está realizando algum treinamento ou algo assim?";
 		close;
 	}
 	mes "[Sponiac]";
@@ -112,29 +113,29 @@ geffen,103,42,5	script	Sponiac	99,{
 	mes "Lu~ Huh?";
 	next;
 	mes "[Sponiac]";
-	mes "Wow, you must be a beginner, right?";
-	mes "What an innocent face! Ha~ hahaha.";
+	mes "Uau, você deve ser um novato, certo?";
+	mes "Que rosto inocente! Ha~ hahaha.";
 	emotion ET_KIK;
 	next;
 	mes "[Sponiac]";
-	mes "Why don't you do some hunting outside instead of walking around and wasting your time?";
+	mes "Por que você não faz alguma caça do lado de fora, em vez de andar por aí e desperdiçar seu tempo?";
 	next;
-	if(select("I am about to leave now.:I've got a Hunting Mission.") == 1) {
+	if(select("Estou prestes a sair agora.:Eu quero uma missão de caça.") == 1) {
 		mes "[Sponiac]";
-		mes "Oh, well. Then, go figure.";
+		mes "Ah bem. Então, vá.";
 		mes "Bye~ bye.";
 		close;
 	}
 	mes "[Sponiac]";
-	mes "Oh, you are from the Eden Group?";
-	mes "What mission do you have?";
+	mes "Oh, você é do grupo Eden?";
+	mes "Qual sua missão?";
 	next;
-	switch(select("Hunting Poison Spore:Hunting Smokie:Hunting Elder Willow:Hunting Coco:Hunting Thara Frog")) {
-		case 1: callsub L_Quest,8266,"Hunting Poison Spore",1000,0,100,"You can find Poison Spores on the Geffen Dungeon 1F or northeast of Prontera. There are other spots but I'll leave it up to you to find out.";
-		case 2: callsub L_Quest,8267,"Hunting Smokie",1000,0,100,"You can find Smokies northeast and northwest of Geffen. Oh, also the field east of Ayotaya is good spot to find them.";
-		case 3: callsub L_Quest,8268,"Hunting Elder Willow",1000,100,110,"You can find Elder Willows northeast of Geffen, east of payon and southwest of Prontera.";
-		case 4: callsub L_Quest,8269,"Hunting Coco",1000,200,150,"You can find Cocos around the east of Payon, southwest of Prontera and the field east of Ayotaya.";
-		case 5: callsub L_Quest,8270,"Hunting Thara Frog",1500,300,200,"You can find Thara Frogs in the Cave east of Comodo or on Turtle Island.";
+	switch(select("Caçar Esporo Venenoso:Caçar Fumacento:Caçar Salgueiro Ancião:Caçar Coco:Caçar Sapo de Thara")) {
+		case 1: callsub L_Quest,8266,"Caçando Esporo Venenoso",1000,0,100,"Você pode encontrar os Esporos Venenosos em Geffen Dungeon 1F ou no nordeste de Prontera. Existem outros locais, mas vou deixar que você descubra.";
+		case 2: callsub L_Quest,8267,"Caçando Fumacento",1000,0,100,"Você pode encontrar Fumacentos no nordeste e noroeste de Geffen. Ah, também o campo a leste de Ayotaya é um bom lugar para encontrá-los.";
+		case 3: callsub L_Quest,8268,"Caçando Salgueiro Ancião",1000,100,110,"Você pode encontrar Salgueiro Ancião no nordeste de Geffen, leste do payon e sudoeste de Prontera.";
+		case 4: callsub L_Quest,8269,"Caçando Coco",1000,200,150,"Você pode encontrar Cocos ao redor do leste de Payon, sudoeste de Prontera e o campo a leste de Ayothaya.";
+		case 5: callsub L_Quest,8270,"Caçando Sapo de Thara",1500,300,200,"Você pode encontrar Sapos de Thara na caverna a leste de Comodo ou na Ilha da Tartaruga.";
 	}
 	end;
 L_Quest:
