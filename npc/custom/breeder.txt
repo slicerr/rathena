@@ -8,6 +8,7 @@
 //= rAthena Project
 //===== Description: =========================================
 //= One-click automatic mount rentals.
+//= Apenas realizando um teste.
 //============================================================
 
 prontera,124,201,1	script	Universal Rental NPC	726,{
